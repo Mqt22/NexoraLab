@@ -1,0 +1,8 @@
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nexoralabofficial.netlify.app/sitemap.xml
