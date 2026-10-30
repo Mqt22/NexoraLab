@@ -178,3 +178,49 @@ serviceTabs.forEach((tab) => {
     });
 
 });
+
+// =========================
+// CLEAN SECTION NAVIGATION
+// Keep section scrolling without leaving #fragments in the URL.
+// Also supports links arriving from dedicated service pages.
+// =========================
+
+document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    const hash = link.getAttribute("href");
+    if (!hash || hash === "#") {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+    }
+
+    const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+function cleanIncomingSectionHash() {
+    if (!window.location.hash) return;
+
+    const targetId = decodeURIComponent(window.location.hash.slice(1));
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    target.scrollIntoView({ behavior: "auto", block: "start" });
+    window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+    );
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", cleanIncomingSectionHash, { once: true });
+} else {
+    cleanIncomingSectionHash();
+}
+
