@@ -4044,3 +4044,22 @@ body {
 .service-page-cta{padding:105px 22px;text-align:center}.service-page-cta h2{max-width:760px;margin:20px auto}.service-page-cta p{margin:0 auto 30px}.service-page-cta .hero-primary{display:inline-flex}.service-related{max-width:1320px;margin:0 auto;padding:0 6vw 70px;display:flex;flex-wrap:wrap;gap:14px}.service-related a,.service-detail-links a{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:15px 18px;border:1px solid #e7e5e1;border-radius:8px;color:#333;text-decoration:none;font-size:13px;transition:border-color .2s ease,background .2s ease}.service-related a:hover,.service-detail-links a:hover{border-color:#b58b5b;background:#faf8f5}.service-related a span,.service-detail-links a span{color:#a77b4c}.service-detail-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:30px 0 42px}
 @media(max-width:850px){.service-page-hero{padding:125px 24px 75px}.service-page-inner{grid-template-columns:1fr;gap:35px}.service-page-visual{min-height:320px}.service-page-process{grid-template-columns:1fr;gap:38px;padding:75px 24px}.service-page-section{padding:80px 24px}.service-detail-links{grid-template-columns:1fr}}
 @media(max-width:520px){.service-page-copy h1{font-size:46px}.service-page-copy>p{font-size:15px}.service-page-visual{min-height:280px}.service-visual-window{min-height:260px}.service-visual-content{padding:30px 22px}.service-visual-blocks b{height:58px}.service-offer-grid{grid-template-columns:1fr}.service-offer-grid article{min-height:180px;padding:25px}.service-page-cta{padding:80px 20px}.service-related{padding:0 20px 55px;flex-direction:column}}
+
+/* NexoraLabs service page palette */
+.service-page-hero{background:#F5F3FF}
+.service-page-eyebrow>span{background:#7C3AED}
+.service-page-copy h1 em,.service-page-section-head h2 em,.service-page-process h2 em,.service-page-cta h2 em{color:#7C3AED}
+.service-visual-window{border-color:rgba(124,58,237,.16);box-shadow:0 30px 80px rgba(76,29,149,.10)}
+.service-visual-kicker,.service-offer-grid article>span,.service-page-process li>b,.service-related a span{color:#7C3AED}
+.service-visual-line.wide,.service-visual-button{background:#002e38}
+.service-visual-blocks b{background:linear-gradient(145deg,#F5F3FF,#E9E3FF)}
+.service-visual-blocks b:nth-child(2){background:linear-gradient(145deg,#EDE9FE,#DBD2FF)}
+.service-page-process{background:#F5F3FF}
+.service-offer-grid,.service-offer-grid article{border-color:rgba(124,58,237,.14)}
+.service-related a:hover{border-color:#7C3AED;background:#F5F3FF}
+.service-page-copy h1,.service-page-section-head h2,.service-page-process h2,.service-page-cta h2{color:#002e38}
+.service-page-copy>p,.service-page-section-head p,.service-page-cta p,.service-offer-grid p,.service-page-process li p{color:#626873}
+.service-detail-links{display:none}
+.service-tabs{flex-wrap:wrap}
+.service-tab{white-space:nowrap}
+@media(max-width:700px){.service-tabs{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}.service-tab{flex:0 0 auto}}
