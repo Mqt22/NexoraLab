@@ -17,4 +17,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://nexoralabofficial.netlify.app/sitemap.xml
+Sitemap: https://nexoralabs.pntr.dev/sitemap.xml
