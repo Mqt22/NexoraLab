@@ -4285,3 +4285,18 @@ body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link[aria-current="
     opacity: 1 !important;
     background: transparent !important;
 }
+
+
+/* Mobile menu: keep the Blog tab's selected background on the blog index
+   and every article page, matching the other selected mobile navigation tabs. */
+@media (max-width: 768px) {
+    body.blog-page .header .mobile-menu .mobile-nav .mobile-nav-link.blog-nav-link.active,
+    body.blog-page .header .mobile-menu .mobile-nav .mobile-nav-link.blog-nav-link[aria-current="page"] {
+        color: #55595f !important;
+        -webkit-text-fill-color: #55595f !important;
+        background: #f2f2f2 !important;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+        box-shadow: none !important;
+    }
+}
