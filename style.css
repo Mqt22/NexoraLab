@@ -164,12 +164,11 @@ body {
     transform: translateY(-1px);
 }
 
-.nav-link.active,
-.nav-link[aria-current="page"] {
-    color: #55595f;
+.desktop-nav .nav-link.active,
+.desktop-nav .nav-link[aria-current="page"] {
+    color: #55595f !important;
     font-weight: 700;
 }
-
 
 /* =========================
    HEADER CTA
@@ -3813,7 +3812,7 @@ body {
 
     .mobile-nav-link.active,
     .mobile-nav-link[aria-current="page"] {
-        color: #55595f;
+        color: #55595f !important;
         background: #f2f2f2;
         font-weight: 700;
     }
