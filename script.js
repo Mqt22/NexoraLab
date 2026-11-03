@@ -51,7 +51,7 @@ if (menuToggle && mobileMenu) {
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
-function updateActiveLink() {
+function updateActiveLink() {\n\n    // The section-based active state belongs only to the homepage.\n    if (document.body.classList.contains("blog-page")) return;
 
     let currentSection = "";
 
