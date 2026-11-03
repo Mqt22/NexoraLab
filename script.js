@@ -62,8 +62,8 @@ function updateActiveLink() {
     let activeSection = "home";
 
     if (isBlog) {
-        // Blog is a separate destination, not a scroll section.
-        activeSection = null;
+        // Keep Blog highlighted on the blog index and every individual article.
+        activeSection = "blog";
     } else if (isHome) {
         const pageSections = document.querySelectorAll("#home, #about, #services, #contact");
         const activationLine = 170;
