@@ -130,8 +130,24 @@ window.addEventListener("load", updateActiveLink);
 document.addEventListener("DOMContentLoaded", updateActiveLink);
 updateActiveLink();
 
-// =========================
-// HEADER + SCROLL PROGRESS
+// Make the Blog item respond immediately on click, and keep it selected
+// after navigation to /blog/ (including the mobile menu).
+document.querySelectorAll('.desktop-nav a[href="/blog/"], .mobile-nav a[href="/blog/"]').forEach(function (blogLink) {
+    blogLink.addEventListener("click", function () {
+        document.querySelectorAll(".desktop-nav .nav-link, .mobile-nav .mobile-nav-link").forEach(function (link) {
+            const isBlogLink = link.getAttribute("href") === "/blog/";
+            link.classList.toggle("active", isBlogLink);
+            if (isBlogLink) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    });
+});
+
+ // =========================
+ // HEADER + SCROLL PROGRESS
 // =========================
 
 const header = document.querySelector(".header");
