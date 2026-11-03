@@ -52,45 +52,48 @@ const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
 function updateActiveLink() {
-    const isHomePage =
-        window.location.pathname === "/" ||
-        window.location.pathname === "/index.html";
+    const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+    const isHomePage = pathname === "/" || pathname === "/index.html";
+    const isBlogPage = pathname === "/blog" || pathname.startsWith("/blog/");
 
-    const desktopLinks = document.querySelectorAll(".desktop-nav .nav-link");
-    const mobileLinks = document.querySelectorAll(".mobile-nav .mobile-nav-link");
+    const desktopLinks = Array.from(document.querySelectorAll(".desktop-nav .nav-link"));
+    const mobileLinks = Array.from(document.querySelectorAll(".mobile-nav .mobile-nav-link"));
 
-    // On inner pages, preserve the active desktop item and mirror it on mobile.
-    if (!isHomePage) {
-        const activeDesktopLink = document.querySelector(".desktop-nav .nav-link.active");
-        if (activeDesktopLink) {
-            const activeUrl = new URL(activeDesktopLink.getAttribute("href"), window.location.href);
-            mobileLinks.forEach((link) => {
-                const linkUrl = new URL(link.getAttribute("href"), window.location.href);
-                const isActive = linkUrl.pathname === activeUrl.pathname &&
-                    linkUrl.hash === activeUrl.hash;
-                link.classList.toggle("active", isActive);
-                if (isActive) link.setAttribute("aria-current", "page");
-                else link.removeAttribute("aria-current");
-            });
-        }
-        return;
+    let activeKey = "home";
+
+    if (isBlogPage) {
+        activeKey = "blog";
+    } else if (isHomePage) {
+        // Activate the last section whose top has reached the header reading line.
+        const sections = Array.from(document.querySelectorAll("main section[id]"));
+        const readingLine = 150;
+        let currentSection = sections[0];
+
+        sections.forEach((section) => {
+            if (section.getBoundingClientRect().top <= readingLine) {
+                currentSection = section;
+            }
+        });
+
+        if (currentSection && currentSection.id) activeKey = currentSection.id;
+    } else {
+        // Dedicated service pages belong to the Services navigation item.
+        activeKey = "services";
     }
 
-    // Home stays active by default until another homepage section is reached.
-    let currentSection = "home";
-
-    document.querySelectorAll("main section[id]").forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top + window.scrollY - 120;
-        const sectionBottom = sectionTop + section.offsetHeight;
-
-        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-            currentSection = section.id;
-        }
-    });
+    const keyForLink = (link) => {
+        const url = new URL(link.getAttribute("href"), window.location.href);
+        const hash = url.hash.replace(/^#/, "");
+        if (hash) return hash;
+        const path = url.pathname.replace(/\/+$/, "") || "/";
+        if (path === "/blog") return "blog";
+        if (path === "/") return "home";
+        return null;
+    };
 
     const updateLinks = (links) => {
         links.forEach((link) => {
-            const isActive = link.getAttribute("href") === `#${currentSection}`;
+            const isActive = keyForLink(link) === activeKey;
             link.classList.toggle("active", isActive);
             if (isActive) link.setAttribute("aria-current", "page");
             else link.removeAttribute("aria-current");
@@ -102,7 +105,9 @@ function updateActiveLink() {
 }
 
 window.addEventListener("scroll", updateActiveLink, { passive: true });
+window.addEventListener("resize", updateActiveLink);
 window.addEventListener("load", updateActiveLink);
+document.addEventListener("DOMContentLoaded", updateActiveLink);
 updateActiveLink();
 
 // =========================
