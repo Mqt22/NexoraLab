@@ -4145,3 +4145,36 @@ body {
 .blog-page .desktop-nav .nav-link::after {
     display: none !important;
 }
+
+
+/* Final blog header fixes: keep logo visible and all links in their default state */
+.blog-page .header .logo {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.blog-page .header .logo-icon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px;
+    object-fit: contain !important;
+}
+.blog-page .desktop-nav .nav-link,
+.blog-page .desktop-nav .nav-link.active,
+.blog-page .desktop-nav .nav-link:hover,
+.blog-page .desktop-nav .nav-link:focus,
+.blog-page .desktop-nav .nav-link:visited {
+    color: #9BA0A8 !important;
+    background: transparent !important;
+    outline: none;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+.blog-page .desktop-nav .nav-link::before,
+.blog-page .desktop-nav .nav-link::after {
+    content: none !important;
+    display: none !important;
+}
