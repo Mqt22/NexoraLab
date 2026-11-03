@@ -4211,3 +4211,11 @@ body {
     width: 0 !important;
     opacity: 0 !important;
 }
+
+
+/* Keep Blog visibly selected on the blog page, on desktop and mobile. */
+body.blog-page .desktop-nav a[href="/blog/"],
+body.blog-page .mobile-nav a[href="/blog/"] {
+    color: #55595f !important;
+    font-weight: 700 !important;
+}
