@@ -52,60 +52,80 @@ const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
 function updateActiveLink() {
-    const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
-    const isHomePage = pathname === "/" || pathname === "/index.html";
-    const isBlogPage = pathname === "/blog" || pathname.startsWith("/blog/");
+    const path = window.location.pathname.replace(/\/+$/, "") || "/";
+    const isHome = path === "/" || path === "/index.html";
+    const isBlog = path === "/blog" || path.indexOf("/blog/") === 0;
 
-    const desktopLinks = Array.from(document.querySelectorAll(".desktop-nav .nav-link"));
-    const mobileLinks = Array.from(document.querySelectorAll(".mobile-nav .mobile-nav-link"));
+    const desktop = document.querySelectorAll(".desktop-nav .nav-link");
+    const mobile = document.querySelectorAll(".mobile-nav .mobile-nav-link");
 
-    let activeKey = "home";
+    let activeSection = "home";
 
-    if (isBlogPage) {
-        activeKey = "blog";
-    } else if (isHomePage) {
-        // Activate the last section whose top has reached the header reading line.
-        const sections = Array.from(document.querySelectorAll("main section[id]"));
-        const readingLine = 150;
-        let currentSection = sections[0];
+    if (isBlog) {
+        activeSection = "blog";
+    } else if (isHome) {
+        const pageSections = document.querySelectorAll("#home, #about, #services, #contact");
+        const activationLine = 170;
+        let found = false;
 
-        sections.forEach((section) => {
-            if (section.getBoundingClientRect().top <= readingLine) {
-                currentSection = section;
+        pageSections.forEach(function (section) {
+            const position = section.getBoundingClientRect();
+            if (position.top <= activationLine) {
+                activeSection = section.id;
+                found = true;
             }
         });
 
-        if (currentSection && currentSection.id) activeKey = currentSection.id;
+        // At the very bottom, keep Contact active even if its section is short.
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+            activeSection = "contact";
+        }
+
+        if (!found && window.scrollY < 10) activeSection = "home";
     } else {
-        // Dedicated service pages belong to the Services navigation item.
-        activeKey = "services";
+        activeSection = "services";
     }
 
-    const keyForLink = (link) => {
-        const url = new URL(link.getAttribute("href"), window.location.href);
-        const hash = url.hash.replace(/^#/, "");
-        if (hash) return hash;
-        const path = url.pathname.replace(/\/+$/, "") || "/";
-        if (path === "/blog") return "blog";
-        if (path === "/") return "home";
+    function linkSection(link) {
+        const href = link.getAttribute("href") || "";
+        if (href === "/blog/" || href === "/blog") return "blog";
+        if (href === "/" || href === "../" || href === "/index.html") return "home";
+        const hashPosition = href.indexOf("#");
+        if (hashPosition !== -1) return href.slice(hashPosition + 1);
         return null;
-    };
+    }
 
-    const updateLinks = (links) => {
-        links.forEach((link) => {
-            const isActive = keyForLink(link) === activeKey;
-            link.classList.toggle("active", isActive);
-            if (isActive) link.setAttribute("aria-current", "page");
-            else link.removeAttribute("aria-current");
+    function applyActiveState(links) {
+        links.forEach(function (link) {
+            const selected = linkSection(link) === activeSection;
+            link.classList.toggle("active", selected);
+            if (selected) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
         });
-    };
+    }
 
-    updateLinks(desktopLinks);
-    updateLinks(mobileLinks);
+    applyActiveState(desktop);
+    applyActiveState(mobile);
 }
 
-window.addEventListener("scroll", updateActiveLink, { passive: true });
-window.addEventListener("resize", updateActiveLink);
+let activeNavigationFrame = null;
+
+function scheduleActiveNavigationUpdate() {
+    if (activeNavigationFrame !== null) {
+        window.cancelAnimationFrame(activeNavigationFrame);
+    }
+    activeNavigationFrame = window.requestAnimationFrame(function () {
+        activeNavigationFrame = null;
+        updateActiveLink();
+    });
+}
+
+window.addEventListener("scroll", scheduleActiveNavigationUpdate, { passive: true });
+window.addEventListener("resize", scheduleActiveNavigationUpdate);
+window.addEventListener("hashchange", scheduleActiveNavigationUpdate);
 window.addEventListener("load", updateActiveLink);
 document.addEventListener("DOMContentLoaded", updateActiveLink);
 updateActiveLink();
