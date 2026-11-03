@@ -4314,3 +4314,19 @@ body.blog-page .header .mobile-menu .mobile-nav a.mobile-nav-link.blog-nav-link[
     opacity: 1 !important;
     box-shadow: none !important;
 }
+
+
+/* Apply the mobile Blog selected-tab background from the page route itself.
+   Do not depend on JavaScript timing or the .active class being applied. */
+@media (max-width: 700px) {
+    body.blog-page .mobile-menu.open .mobile-nav a.mobile-nav-link.blog-nav-link,
+    body.blog-page .mobile-menu .mobile-nav a.mobile-nav-link.blog-nav-link {
+        background: #f2f2f2 !important;
+        background-color: #f2f2f2 !important;
+        background-image: none !important;
+        color: #55595f !important;
+        -webkit-text-fill-color: #55595f !important;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+    }
+}
