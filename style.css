@@ -4120,3 +4120,28 @@ body {
 .blog-breadcrumb{max-width:1180px;margin:0 auto;padding:24px 6vw 0;color:#777;font-size:13px}
 .blog-breadcrumb a{color:#7C3AED;text-decoration:none}
 @media(max-width:760px){.blog-hero{padding:125px 22px 55px}.blog-list{padding:48px 20px 75px}.blog-card{grid-template-columns:1fr;padding:15px;gap:20px}.blog-card img{height:220px}.blog-article-hero{padding:120px 22px 42px}.blog-article-hero p{font-size:16px}.blog-cover{width:calc(100% - 40px);height:250px}.blog-article{padding:42px 22px 75px}.blog-article p,.blog-article li{font-size:15px}}
+
+
+/* Blog pages: preserve the original NexoraLabs logo and neutral nav state */
+.blog-page .header .logo-icon,
+.blog-page .footer .footer-logo-icon {
+    display: block;
+    width: clamp(27px, 2.5vw, 36px);
+    height: clamp(27px, 2.5vw, 36px);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.blog-page .desktop-nav .nav-link,
+.blog-page .desktop-nav .nav-link:visited,
+.blog-page .desktop-nav .nav-link:hover,
+.blog-page .desktop-nav .nav-link:focus,
+.blog-page .desktop-nav .nav-link:active {
+    color: #9BA0A8 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none;
+}
+.blog-page .desktop-nav .nav-link::before,
+.blog-page .desktop-nav .nav-link::after {
+    display: none !important;
+}
