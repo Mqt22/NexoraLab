@@ -4243,3 +4243,11 @@ body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"][aria-current
     font-weight: 700 !important;
     opacity: 1 !important;
 }
+
+
+/* Blog is a separate page link: subtle light-black styling, not an active state. */
+.desktop-nav .blog-nav-link,
+.mobile-nav .blog-nav-link {
+    color: #55595f !important;
+    -webkit-text-fill-color: #55595f !important;
+}
