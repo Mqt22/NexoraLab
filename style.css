@@ -4245,9 +4245,29 @@ body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"][aria-current
 }
 
 
-/* Blog is a separate page link: subtle light-black styling, not an active state. */
-.desktop-nav .blog-nav-link,
-.mobile-nav .blog-nav-link {
+/* Blog destination highlight: apply on the blog index and every article page.
+   This is visual styling only; it does not use the active-section class. */
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link,
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link:link,
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link:visited,
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link:hover,
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link:focus,
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link:active,
+body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link,
+body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link:link,
+body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link:visited,
+body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link:hover,
+body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link:focus,
+body.blog-page .header .mobile-nav .mobile-nav-link.blog-nav-link:active {
     color: #55595f !important;
     -webkit-text-fill-color: #55595f !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link::before,
+body.blog-page .header .desktop-nav .nav-link.blog-nav-link::after {
+    content: none !important;
+    display: none !important;
 }
