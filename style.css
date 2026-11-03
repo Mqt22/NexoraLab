@@ -4219,3 +4219,27 @@ body.blog-page .mobile-nav a[href="/blog/"] {
     color: #55595f !important;
     font-weight: 700 !important;
 }
+
+
+/* FINAL OVERRIDE: Blog must stay visibly active on the Blog page. */
+body.blog-page .header .desktop-nav a#blog-nav-link,
+body.blog-page .header .desktop-nav a#blog-nav-link:link,
+body.blog-page .header .desktop-nav a#blog-nav-link:visited,
+body.blog-page .header .desktop-nav a#blog-nav-link:hover,
+body.blog-page .header .desktop-nav a#blog-nav-link:focus,
+body.blog-page .header .desktop-nav a#blog-nav-link:active,
+body.blog-page .header .desktop-nav a#blog-nav-link.active,
+body.blog-page .header .desktop-nav a#blog-nav-link[aria-current="page"],
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"],
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"]:link,
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"]:visited,
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"]:hover,
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"]:focus,
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"]:active,
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"].active,
+body.blog-page .header .mobile-nav a.mobile-nav-link[href="/blog/"][aria-current="page"] {
+    color: #55595f !important;
+    -webkit-text-fill-color: #55595f !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
