@@ -4178,3 +4178,28 @@ body {
     content: none !important;
     display: none !important;
 }
+
+
+/* Blog navigation link: force the same neutral appearance in every state */
+.blog-page .desktop-nav a#blog-nav-link,
+.blog-page .desktop-nav a#blog-nav-link:link,
+.blog-page .desktop-nav a#blog-nav-link:visited,
+.blog-page .desktop-nav a#blog-nav-link:hover,
+.blog-page .desktop-nav a#blog-nav-link:focus,
+.blog-page .desktop-nav a#blog-nav-link:active,
+.blog-page .desktop-nav a#blog-nav-link.active {
+    color: #9BA0A8 !important;
+    background: transparent !important;
+    background-image: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    transform: none !important;
+}
+.blog-page .desktop-nav a#blog-nav-link::before,
+.blog-page .desktop-nav a#blog-nav-link::after {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    opacity: 0 !important;
+}
