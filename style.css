@@ -4086,7 +4086,7 @@ body {
 
 
 /* Blog navigation + editorial pages */
-.footer-links a:hover,.nav-link[href="/blog/"]{color:#7C3AED}
+.footer-links a:hover{color:#7C3AED}
 .blog-page{background:#fff;color:#171717;min-height:100vh}
 .blog-hero{padding:155px 6vw 76px;background:#F5F3FF}
 .blog-wrap{max-width:1180px;margin:0 auto}
