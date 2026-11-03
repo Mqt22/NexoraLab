@@ -51,40 +51,59 @@ if (menuToggle && mobileMenu) {
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
-function updateActiveLink() {\n\n    // The section-based active state belongs only to the homepage.\n    if (document.body.classList.contains("blog-page")) return;
+function updateActiveLink() {
+    const isHomePage =
+        window.location.pathname === "/" ||
+        window.location.pathname === "/index.html";
 
-    let currentSection = "";
+    const desktopLinks = document.querySelectorAll(".desktop-nav .nav-link");
+    const mobileLinks = document.querySelectorAll(".mobile-nav .mobile-nav-link");
 
-    sections.forEach((section) => {
-
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute("id");
+    // On inner pages, preserve the active desktop item and mirror it on mobile.
+    if (!isHomePage) {
+        const activeDesktopLink = document.querySelector(".desktop-nav .nav-link.active");
+        if (activeDesktopLink) {
+            const activeUrl = new URL(activeDesktopLink.getAttribute("href"), window.location.href);
+            mobileLinks.forEach((link) => {
+                const linkUrl = new URL(link.getAttribute("href"), window.location.href);
+                const isActive = linkUrl.pathname === activeUrl.pathname &&
+                    linkUrl.hash === activeUrl.hash;
+                link.classList.toggle("active", isActive);
+                if (isActive) link.setAttribute("aria-current", "page");
+                else link.removeAttribute("aria-current");
+            });
         }
+        return;
+    }
 
+    // Home stays active by default until another homepage section is reached.
+    let currentSection = "home";
+
+    document.querySelectorAll("main section[id]").forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY - 120;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+            currentSection = section.id;
+        }
     });
 
+    const updateLinks = (links) => {
+        links.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${currentSection}`;
+            link.classList.toggle("active", isActive);
+            if (isActive) link.setAttribute("aria-current", "page");
+            else link.removeAttribute("aria-current");
+        });
+    };
 
-    navLinks.forEach((link) => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${currentSection}`) {
-            link.classList.add("active");
-        }
-
-    });
-
+    updateLinks(desktopLinks);
+    updateLinks(mobileLinks);
 }
 
-window.addEventListener("scroll", updateActiveLink);
+window.addEventListener("scroll", updateActiveLink, { passive: true });
 window.addEventListener("load", updateActiveLink);
-
+updateActiveLink();
 
 // =========================
 // HEADER + SCROLL PROGRESS
