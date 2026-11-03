@@ -167,6 +167,7 @@ body {
 .nav-link.active,
 .nav-link[aria-current="page"] {
     color: #55595f;
+    font-weight: 700;
 }
 
 
@@ -3814,6 +3815,7 @@ body {
     .mobile-nav-link[aria-current="page"] {
         color: #55595f;
         background: #f2f2f2;
+        font-weight: 700;
     }
 
     .mobile-cta {
