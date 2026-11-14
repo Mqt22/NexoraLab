@@ -5342,3 +5342,40 @@ html body .team-section .team-container .team-grid > .team-card-abdul-rehman .te
   box-shadow: none !important;
   outline: 0 !important;
 }
+
+
+/* FINAL OVERRIDE: Abdul Rehman must have no card or avatar tint/border */
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman,
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman:hover,
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman:focus,
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman:focus-within {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman::before,
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman .team-avatar-wrap,
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman .team-avatar-wrap:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+html body .team-section .team-container .team-grid .team-card.team-card-abdul-rehman .team-avatar-wrap img {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
