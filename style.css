@@ -5299,3 +5299,30 @@ html body .team-section .team-container .team-grid > .team-card-abdul-rehman .te
   border: 0 !important;
   box-shadow: none !important;
 }
+
+
+/* Abdul Rehman: transparent card; green photo backdrop only */
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman .team-avatar-wrap {
+  background: #dcfce7 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+}
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman .team-avatar-wrap img {
+  width: 126px !important;
+  height: 126px !important;
+  min-width: 126px !important;
+  min-height: 126px !important;
+  max-width: 126px !important;
+  max-height: 126px !important;
+  object-fit: cover !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+}
