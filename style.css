@@ -5404,3 +5404,45 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   object-fit: cover !important;
   object-position: center 35% !important;
 }
+
+
+/* Abdul Rehman: match the other team photos exactly; no circle backdrop or border */
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 170px !important;
+  width: 170px !important;
+  height: 170px !important;
+  min-width: 170px !important;
+  min-height: 170px !important;
+  max-width: 170px !important;
+  max-height: 170px !important;
+  margin: 0 auto 10px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap img.team-avatar-svg {
+  display: block !important;
+  flex: 0 0 126px !important;
+  width: 126px !important;
+  height: 126px !important;
+  min-width: 126px !important;
+  min-height: 126px !important;
+  max-width: 126px !important;
+  max-height: 126px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 35% !important;
+}
