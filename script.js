@@ -65,7 +65,7 @@ function updateActiveLink() {
         // Keep Blog highlighted on the blog index and every individual article.
         activeSection = "blog";
     } else if (isHome) {
-        const pageSections = document.querySelectorAll("#home, #about, #services, #contact");
+        const pageSections = document.querySelectorAll("#home, #about, #services, #ceo, #contact");
         const activationLine = 170;
         let found = false;
 
