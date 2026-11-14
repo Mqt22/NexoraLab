@@ -4568,3 +4568,41 @@ html body .team-section img.team-avatar-svg{
  html body .team-section .team-avatar-link,html body .team-section .team-avatar-wrap,
  html body .team-section img.team-avatar-svg{width:72px!important;height:72px!important;min-width:72px!important;min-height:72px!important;max-width:72px!important;max-height:72px!important}
 }
+
+
+/* Compact team profiles using repository avatar assets */
+html body .team-section .team-grid{gap:20px!important}
+html body .team-section .team-grid .team-card,
+html body .team-section .team-grid .team-card:nth-child(n){
+  width:100%!important;max-width:220px!important;min-height:0!important;height:auto!important;
+  padding:8px 6px!important;margin:0 auto!important;
+  background:transparent!important;background-image:none!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+html body .team-section .team-grid .team-card:hover{
+  background:transparent!important;background-image:none!important;border:0!important;
+  box-shadow:none!important;transform:translateY(-4px)!important;
+}
+html body .team-section .team-avatar-link,
+html body .team-section .team-avatar-wrap{
+  display:block!important;width:64px!important;height:64px!important;
+  min-width:64px!important;min-height:64px!important;margin:0 auto 9px!important;
+  padding:0!important;overflow:hidden!important;border:0!important;border-radius:0!important;
+  background:transparent!important;background-image:none!important;box-shadow:none!important;
+}
+html body .team-section img.team-avatar-svg{
+  display:block!important;width:64px!important;height:64px!important;
+  max-width:64px!important;max-height:64px!important;object-fit:contain!important;
+  background:transparent!important;
+}
+html body .team-section .team-card h3{font-size:16px!important;margin:0 0 3px!important}
+html body .team-section .team-card .team-handle{font-size:11px!important;margin:0 0 2px!important}
+html body .team-section .team-card .team-role{font-size:11px!important;margin:0!important}
+@media(max-width:760px){
+ html body .team-section .team-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+ html body .team-section .team-grid .team-card{max-width:none!important;padding:6px 2px!important}
+ html body .team-section .team-avatar-link,html body .team-section .team-avatar-wrap,
+ html body .team-section img.team-avatar-svg{width:56px!important;height:56px!important;min-width:56px!important;min-height:56px!important;max-width:56px!important;max-height:56px!important}
+ html body .team-section .team-card h3{font-size:14px!important}
+}
+@media(max-width:360px){html body .team-section .team-grid{grid-template-columns:1fr!important}}
