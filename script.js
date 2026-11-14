@@ -45,6 +45,45 @@ if (menuToggle && mobileMenu) {
 
 
 // =========================
+ // SHARED OUR TEAM NAVIGATION
+ // =========================
+(function addTeamNavigationEverywhere() {
+    const desktopNav = document.querySelector(".desktop-nav");
+    const mobileNav = document.querySelector(".mobile-nav");
+    const footerLinks = document.querySelector(".footer-links");
+
+    if (desktopNav && !desktopNav.querySelector(".team-nav-link")) {
+        const link = document.createElement("a");
+        link.href = "/#team";
+        link.className = "nav-link team-nav-link";
+        link.textContent = "Our Team";
+        const services = desktopNav.querySelector('a[href*="#services"]');
+        if (services) services.insertAdjacentElement("afterend", link);
+        else desktopNav.appendChild(link);
+    }
+
+    if (mobileNav && !mobileNav.querySelector(".team-nav-link")) {
+        const link = document.createElement("a");
+        link.href = "/#team";
+        link.className = "mobile-nav-link team-nav-link";
+        link.textContent = "Our Team";
+        const services = mobileNav.querySelector('a[href*="#services"]');
+        if (services) services.insertAdjacentElement("afterend", link);
+        else mobileNav.appendChild(link);
+    }
+
+    if (footerLinks && !footerLinks.querySelector(".team-footer-link")) {
+        const link = document.createElement("a");
+        link.href = "/#team";
+        link.className = "team-footer-link";
+        link.textContent = "Our Team";
+        const services = footerLinks.querySelector('a[href*="#services"]');
+        if (services) services.insertAdjacentElement("afterend", link);
+        else footerLinks.appendChild(link);
+    }
+})();
+
+// =========================
 // ACTIVE NAVIGATION LINK
 // =========================
 
@@ -65,7 +104,7 @@ function updateActiveLink() {
         // Keep Blog highlighted on the blog index and every individual article.
         activeSection = "blog";
     } else if (isHome) {
-        const pageSections = document.querySelectorAll("#home, #about, #services, #ceo, #contact");
+        const pageSections = document.querySelectorAll("#home, #about, #services, #ceo, #team, #contact");
         const activationLine = 170;
         let found = false;
 
