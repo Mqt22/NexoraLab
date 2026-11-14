@@ -5285,3 +5285,17 @@ html body .team-section .team-container .team-grid > .team-card-abdul-rehman .te
   line-height: 1.55 !important;
   text-align: center !important;
 }
+
+
+/* Abdul Rehman card: keep the shared team-card layout, remove all card decoration */
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman .team-avatar-wrap {
+  background: #dcfce7 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
