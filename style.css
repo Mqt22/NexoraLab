@@ -4995,3 +4995,99 @@ html body .team-section .team-container .team-grid .team-card .team-role{font-si
   html body .team-section .team-container .team-grid{grid-template-columns:1fr!important}
   html body .team-section .team-container .team-grid .team-card{justify-self:center!important;width:250px!important}
 }
+
+
+/* Team avatar and member-handle badge refinement */
+html body .team-section .team-container .team-grid .team-card .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 170px !important;
+  height: 170px !important;
+  min-width: 170px !important;
+  min-height: 170px !important;
+  margin: 0 auto 10px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+html body .team-section .team-container .team-grid .team-card-haider .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card-haider .team-avatar-wrap {
+  background: #fff0df !important;
+}
+html body .team-section .team-container .team-grid .team-card-taha .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card-taha .team-avatar-wrap {
+  background: #eaf2ff !important;
+}
+html body .team-section .team-container .team-grid .team-card-tahreem .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card-tahreem .team-avatar-wrap {
+  background: #fcecf4 !important;
+}
+html body .team-section .team-container .team-grid .team-card .team-avatar-link img,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap img,
+html body .team-section .team-container .team-grid .team-card img.team-avatar-svg {
+  display: block !important;
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+html body .team-section .team-container .team-grid .team-card h3,
+html body .team-section .team-container .team-grid .team-card .team-handle,
+html body .team-section .team-container .team-grid .team-card .team-role {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+html body .team-section .team-container .team-grid .team-card .team-handle {
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  padding: 5px 11px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+html body .team-section .team-container .team-grid .team-card-haider .team-handle {
+  color: #a64b12 !important;
+  background: #fff0df !important;
+}
+html body .team-section .team-container .team-grid .team-card-taha .team-handle {
+  color: #2459a6 !important;
+  background: #eaf2ff !important;
+}
+html body .team-section .team-container .team-grid .team-card-tahreem .team-handle {
+  color: #a33d70 !important;
+  background: #fcecf4 !important;
+}
+@media (max-width: 600px) {
+  html body .team-section .team-container .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 14px !important;
+  }
+}
+@media (max-width: 420px) {
+  html body .team-section .team-container .team-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
