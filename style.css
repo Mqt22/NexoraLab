@@ -4397,3 +4397,41 @@ a.team-card:hover{transform:translateY(-6px);border-color:rgba(124,58,237,.35);b
 @media(max-width:760px){.team-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;gap:16px}.team-card{padding:28px 20px 26px}.team-heading{margin-bottom:34px}}
 @media(min-width:761px) and (max-width:1050px){.team-grid{gap:14px}.team-card{padding:28px 14px}.team-role{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.team-card{transition:none}}
+
+
+/* NexoraLabs team cards — refreshed responsive styling */
+.team-section{position:relative!important;padding:clamp(64px,8vw,112px) clamp(18px,5vw,72px)!important;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)!important;overflow:hidden}
+.team-container{width:min(1180px,100%)!important;margin:0 auto!important}
+.team-heading{text-align:center!important;max-width:680px!important;margin:0 auto 46px!important}
+.team-eyebrow{display:inline-block!important;color:#e87524!important;font-size:11px!important;font-weight:800!important;letter-spacing:.16em!important;margin-bottom:12px!important}
+.team-heading h2{font-size:clamp(30px,4vw,48px)!important;line-height:1.12!important;color:#172033!important;margin:0 0 14px!important}
+.team-heading h2 span{color:#2563eb!important}
+.team-heading p{color:#64748b!important;font-size:15px!important;line-height:1.7!important;margin:0!important}
+.team-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important;align-items:stretch!important}
+.team-card{position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;text-align:center!important;min-width:0!important;min-height:260px!important;padding:32px 22px!important;border:2px solid #dbeafe!important;border-radius:22px!important;background:#fff!important;box-shadow:0 12px 34px rgba(15,23,42,.06)!important;color:#172033!important;text-decoration:none!important;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important}
+.team-card:nth-child(1){border-color:#f59e0b!important;background:linear-gradient(160deg,#fffaf0,#fff 72%)!important}
+.team-card:nth-child(2){border-color:#3b82f6!important;background:linear-gradient(160deg,#eff6ff,#fff 72%)!important}
+.team-card:nth-child(3){border-color:#ec4899!important;background:linear-gradient(160deg,#fdf2f8,#fff 72%)!important}
+a.team-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 42px rgba(15,23,42,.12)!important}
+.team-card:nth-child(1):hover{border-color:#ea580c!important}
+.team-card:nth-child(2):hover{border-color:#1d4ed8!important}
+.team-card:nth-child(3):hover{border-color:#db2777!important}
+.team-avatar{position:relative!important;display:grid!important;place-items:center!important;flex:0 0 auto!important;width:104px!important;height:104px!important;border-radius:50%!important;margin:0 auto 20px!important;overflow:hidden!important;border:3px solid currentColor!important;box-shadow:0 5px 16px rgba(15,23,42,.10)!important}
+.team-card:nth-child(1) .team-avatar{color:#ea580c!important;background:linear-gradient(145deg,#ffedd5,#fed7aa)!important}
+.team-card:nth-child(2) .team-avatar{color:#2563eb!important;background:linear-gradient(145deg,#dbeafe,#bfdbfe)!important}
+.team-card:nth-child(3) .team-avatar{color:#db2777!important;background:linear-gradient(145deg,#fce7f3,#fbcfe8)!important}
+.team-avatar:before{content:""!important;position:absolute!important;top:20px!important;width:30px!important;height:30px!important;border-radius:50%!important;background:currentColor!important;box-shadow:none!important}
+.team-avatar:after{content:""!important;position:absolute!important;bottom:-7px!important;width:66px!important;height:50px!important;border-radius:36px 36px 14px 14px!important;background:currentColor!important}
+.team-avatar.female:before{top:19px!important;width:31px!important;height:31px!important;box-shadow:0 -7px 0 6px currentColor!important}
+.team-card h3{font-size:21px!important;line-height:1.25!important;font-weight:800!important;margin:0 0 9px!important}
+.team-card:nth-child(1) h3{color:#c2410c!important}
+.team-card:nth-child(2) h3{color:#1d4ed8!important}
+.team-card:nth-child(3) h3{color:#be185d!important}
+.team-role{font-size:13px!important;line-height:1.5!important;font-weight:650!important;color:#475569!important;margin:0 0 14px!important}
+.team-tags{display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;flex-wrap:wrap!important;color:#c2410c!important;font-size:12px!important;font-weight:800!important;letter-spacing:.02em!important}
+.team-tags i{font-style:normal!important;color:#f59e0b!important}
+.team-card:focus-visible{outline:3px solid #2563eb!important;outline-offset:4px!important}
+@media(max-width:760px){.team-section{padding:58px 18px!important}.team-grid{grid-template-columns:minmax(0,1fr)!important;max-width:440px!important;margin:0 auto!important;gap:16px!important}.team-card{min-height:230px!important;padding:28px 20px!important}.team-heading{margin-bottom:32px!important}}
+@media(min-width:761px) and (max-width:1050px){.team-grid{gap:14px!important}.team-card{padding:26px 14px!important}.team-role{font-size:12px!important}}
+@media(min-width:1400px){.team-container{max-width:1240px!important}.team-grid{gap:28px!important}.team-card{padding:38px 28px!important}}
+@media(prefers-reduced-motion:reduce){.team-card{transition:none!important}}
