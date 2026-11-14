@@ -5140,3 +5140,39 @@ html body .team-section .team-container .team-grid .team-card img.team-avatar-sv
   border-radius: 50% !important;
   margin: 0 !important;
 }
+
+
+/* Keep team cards completely still; animate only each profile photo */
+html body .team-section .team-container .team-grid .team-card,
+html body .team-section .team-container .team-grid .team-card:hover,
+html body .team-section .team-container .team-grid .team-card:focus-within {
+  transform: none !important;
+  transition: box-shadow .2s ease !important;
+}
+html body .team-section .team-container .team-grid .team-card:hover {
+  box-shadow: inherit !important;
+}
+html body .team-section .team-container .team-grid .team-card .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap {
+  transform: none !important;
+  transition: none !important;
+}
+html body .team-section .team-container .team-grid .team-card .team-avatar-link img,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap img,
+html body .team-section .team-container .team-grid .team-card img.team-avatar-svg {
+  transform: scale(1) !important;
+  transition: transform .28s ease !important;
+  will-change: transform;
+}
+html body .team-section .team-container .team-grid .team-card:hover .team-avatar-link img,
+html body .team-section .team-container .team-grid .team-card:hover .team-avatar-wrap img,
+html body .team-section .team-container .team-grid .team-card:hover img.team-avatar-svg {
+  transform: scale(1.09) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .team-section .team-container .team-grid .team-card .team-avatar-link img,
+  html body .team-section .team-container .team-grid .team-card .team-avatar-wrap img,
+  html body .team-section .team-container .team-grid .team-card img.team-avatar-svg {
+    transition: none !important;
+  }
+}
