@@ -4882,15 +4882,16 @@ html body .team-section .team-container .team-grid .team-card .team-role{
 }
 
 
-/* Final correction: 100x100 profile cards (not 100px portraits) */
+
+/* Team cards: 250x250px with 40px spacing */
 html body .team-section .team-container .team-grid{
   display:grid!important;
-  grid-template-columns:repeat(3,100px)!important;
+  grid-template-columns:repeat(3,250px)!important;
   justify-content:center!important;
   justify-items:center!important;
-  align-items:start!important;
+  align-items:stretch!important;
   column-gap:40px!important;
-  row-gap:20px!important;
+  row-gap:24px!important;
   width:max-content!important;
   max-width:100%!important;
   margin:0 auto!important;
@@ -4899,18 +4900,18 @@ html body .team-section .team-container .team-grid .team-card{
   display:flex!important;
   flex-direction:column!important;
   align-items:center!important;
-  justify-content:flex-start!important;
+  justify-content:center!important;
   box-sizing:border-box!important;
-  width:100px!important;
-  min-width:100px!important;
-  max-width:100px!important;
-  height:100px!important;
-  min-height:100px!important;
-  max-height:100px!important;
+  width:250px!important;
+  min-width:250px!important;
+  max-width:250px!important;
+  height:250px!important;
+  min-height:250px!important;
+  max-height:250px!important;
   overflow:hidden!important;
   margin:0!important;
-  padding:5px 3px!important;
-  gap:2px!important;
+  padding:20px 14px!important;
+  gap:7px!important;
   text-align:center!important;
 }
 html body .team-section .team-container .team-grid .team-card .team-avatar-link,
@@ -4918,34 +4919,49 @@ html body .team-section .team-container .team-grid .team-card .team-avatar-wrap,
 html body .team-section .team-container .team-grid .team-card img.team-avatar-svg{
   display:block!important;
   box-sizing:border-box!important;
-  flex:0 0 46px!important;
-  width:46px!important;height:46px!important;
-  min-width:46px!important;min-height:46px!important;
-  max-width:46px!important;max-height:46px!important;
-  margin:0 auto 2px!important;
+  flex:0 0 112px!important;
+  width:112px!important;height:112px!important;
+  min-width:112px!important;min-height:112px!important;
+  max-width:112px!important;max-height:112px!important;
+  margin:0 auto 8px!important;
   object-fit:cover!important;
   border-radius:50%!important;
   overflow:hidden!important;
 }
 html body .team-section .team-container .team-grid .team-card h3{
-  font-size:11px!important;line-height:1.15!important;
+  font-size:18px!important;line-height:1.2!important;
   margin:0!important;white-space:nowrap!important;
 }
 html body .team-section .team-container .team-grid .team-card .team-handle{
-  font-size:9px!important;line-height:1.1!important;
+  font-size:13px!important;line-height:1.3!important;
   margin:0!important;white-space:nowrap!important;
 }
 html body .team-section .team-container .team-grid .team-card .team-role{
-  font-size:9px!important;line-height:1.1!important;
+  font-size:13px!important;line-height:1.3!important;
   margin:0!important;white-space:normal!important;
 }
-@media(max-width:420px){
+@media(max-width:900px){
   html body .team-section .team-container .team-grid{
-    grid-template-columns:repeat(3,minmax(0,100px))!important;
-    column-gap:clamp(10px,4vw,40px)!important;
+    grid-template-columns:repeat(3,minmax(0,250px))!important;
+    column-gap:clamp(14px,3vw,40px)!important;
     width:100%!important;
   }
   html body .team-section .team-container .team-grid .team-card{
-    width:100%!important;min-width:0!important;max-width:100%!important;
+    width:100%!important;min-width:0!important;max-width:250px!important;
+  }
+}
+@media(max-width:600px){
+  html body .team-section .team-container .team-grid{
+    grid-template-columns:repeat(2,minmax(0,250px))!important;
+    justify-content:center!important;
+  }
+}
+@media(max-width:420px){
+  html body .team-section .team-container .team-grid{
+    grid-template-columns:minmax(0,250px)!important;
+    width:100%!important;
+  }
+  html body .team-section .team-container .team-grid .team-card{
+    width:min(250px,100%)!important;max-width:250px!important;
   }
 }
