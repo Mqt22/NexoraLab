@@ -5446,3 +5446,100 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   object-fit: cover !important;
   object-position: center 35% !important;
 }
+
+
+/* Abdul Rehman: preserve the green avatar disc, remove only its added ring, and match the other cards */
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  align-self: start !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 250px !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 7px !important;
+  text-align: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 170px !important;
+  width: 170px !important;
+  height: 170px !important;
+  min-width: 170px !important;
+  min-height: 170px !important;
+  max-width: 170px !important;
+  max-height: 170px !important;
+  margin: 0 auto 8px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  background: #dcfce7 !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap img.team-avatar-svg {
+  display: block !important;
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 35% !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman h3 {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #172033 !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-handle {
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 5px 11px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: #dcfce7 !important;
+  color: #15803d !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-role {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  text-align: center !important;
+}
