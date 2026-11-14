@@ -5326,3 +5326,19 @@ html body .team-section .team-container .team-grid > .team-card-abdul-rehman .te
   border: 0 !important;
   border-radius: 50% !important;
 }
+
+
+/* Abdul Rehman: no green card border or card/avatar background */
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman .team-avatar-wrap,
+html body .team-section .team-container .team-grid > .team-card-abdul-rehman .team-avatar-link {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
