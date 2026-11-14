@@ -5620,13 +5620,13 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
 /* Abdul Rehman: match the other team avatar circles and use a light-green backdrop */
 html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap {
   box-sizing: border-box !important;
-  flex: 0 0 170px !important;
-  width: 170px !important;
-  height: 170px !important;
-  min-width: 170px !important;
-  min-height: 170px !important;
-  max-width: 170px !important;
-  max-height: 170px !important;
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
   position: relative !important;
   overflow: visible !important;
   border: 0 !important;
@@ -5640,8 +5640,8 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
-  width: 170px !important;
-  height: 170px !important;
+  width: 150px !important;
+  height: 150px !important;
   border: 0 !important;
   border-radius: 50% !important;
   background: #d5f5ee !important;
