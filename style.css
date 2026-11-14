@@ -4470,3 +4470,10 @@ a.team-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 42px rg
 @media(min-width:761px) and (max-width:1050px){.team-grid{gap:14px!important}.team-card{padding:26px 14px!important}.team-card .team-role{font-size:12px!important}}
 @media(min-width:1400px){.team-container{max-width:1240px!important}.team-grid{gap:28px!important}.team-card{padding:36px 28px!important}}
 @media(prefers-reduced-motion:reduce){.team-card,.team-avatar-link,.team-avatar-wrap{transition:none!important}}
+
+/* SVG cartoon avatars */
+.team-avatar-svg{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
+.team-avatar-link,.team-avatar-wrap{width:108px!important;height:108px!important;border-radius:50%!important;overflow:hidden!important;background:transparent!important}
+.team-avatar-link{display:block!important;flex:0 0 auto!important;margin:0 auto 20px!important}
+.team-avatar-wrap{display:block!important;flex:0 0 auto!important;margin:0 auto 20px!important}
+.team-avatar-link:hover,.team-card:hover .team-avatar-wrap{transform:scale(1.06)!important}
