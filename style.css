@@ -5543,3 +5543,37 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   line-height: 1.35 !important;
   text-align: center !important;
 }
+
+/* Abdul Rehman: make the green circular backdrop clearly visible around the unchanged 150px photo */
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 190px !important;
+  width: 190px !important;
+  height: 190px !important;
+  min-width: 190px !important;
+  min-height: 190px !important;
+  max-width: 190px !important;
+  max-height: 190px !important;
+  margin: 0 auto 8px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  background: #22c55e !important;
+  background-color: #22c55e !important;
+  background-image: none !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap img.team-avatar-svg {
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+}
