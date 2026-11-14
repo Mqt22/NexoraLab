@@ -4606,3 +4606,32 @@ html body .team-section .team-card .team-role{font-size:11px!important;margin:0!
  html body .team-section .team-card h3{font-size:14px!important}
 }
 @media(max-width:360px){html body .team-section .team-grid{grid-template-columns:1fr!important}}
+
+
+/* Final compact centered team row: 32px avatars */
+html body .team-section .team-container{width:100%!important;margin-left:auto!important;margin-right:auto!important}
+html body .team-section .team-grid{
+  display:flex!important;justify-content:center!important;align-items:flex-start!important;
+  gap:12px!important;width:100%!important;margin-left:auto!important;margin-right:auto!important;
+}
+html body .team-section .team-grid .team-card,
+html body .team-section .team-grid .team-card:nth-child(n){
+  flex:0 1 150px!important;width:150px!important;max-width:150px!important;
+  margin:0!important;padding:6px 4px!important;text-align:center!important;
+}
+html body .team-section .team-avatar-link,
+html body .team-section .team-avatar-wrap,
+html body .team-section img.team-avatar-svg{
+  width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;
+  max-width:32px!important;max-height:32px!important;
+}
+html body .team-section .team-avatar-link,
+html body .team-section .team-avatar-wrap{margin:0 auto 8px!important}
+@media(max-width:520px){
+ html body .team-section .team-grid{gap:8px!important}
+ html body .team-section .team-grid .team-card,
+ html body .team-section .team-grid .team-card:nth-child(n){flex:0 1 31%!important;width:31%!important;max-width:31%!important}
+ html body .team-section .team-card h3{font-size:13px!important}
+ html body .team-section .team-card .team-handle,
+ html body .team-section .team-card .team-role{font-size:10px!important}
+}
