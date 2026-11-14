@@ -5577,3 +5577,41 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   max-width: 150px !important;
   max-height: 150px !important;
 }
+
+/* Abdul Rehman: render the green circle as a separate layer behind his photo */
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #22c55e !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman .team-avatar-wrap img.team-avatar-svg {
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+}
