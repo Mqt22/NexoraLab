@@ -4530,3 +4530,41 @@ a.team-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 42px rg
 @media(max-width:760px){.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}.team-card{padding:6px 3px 10px!important}.team-avatar-link,.team-avatar-wrap{width:68px!important;height:68px!important}.team-card h3{font-size:15px!important}.team-card .team-handle,.team-card .team-role{font-size:11px!important}}
 @media(max-width:380px){.team-grid{grid-template-columns:1fr!important;max-width:240px!important}}
 @media(prefers-reduced-motion:reduce){.team-card{transition:none!important}}
+
+
+/* FINAL OVERRIDE: transparent profile layout and visible SVG illustrations */
+html body .team-section .team-grid .team-card,
+html body .team-section .team-grid .team-card:nth-child(1),
+html body .team-section .team-grid .team-card:nth-child(2),
+html body .team-section .team-grid .team-card:nth-child(3),
+html body .team-section .team-grid .team-card.team-card-haider,
+html body .team-section .team-grid .team-card.team-card-taha,
+html body .team-section .team-grid .team-card.team-card-tahreem{
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  outline:0!important;
+  border-radius:0!important;
+}
+html body .team-section .team-grid .team-card:hover{
+  background:transparent!important;background-image:none!important;
+  border:0!important;box-shadow:none!important;transform:translateY(-6px)!important;
+}
+html body .team-section .team-avatar-link,
+html body .team-section .team-avatar-wrap{
+  display:block!important;visibility:visible!important;opacity:1!important;
+  width:88px!important;height:88px!important;min-width:88px!important;min-height:88px!important;
+  margin:0 auto 12px!important;padding:0!important;overflow:hidden!important;
+  background:transparent!important;background-image:none!important;border:0!important;
+  border-radius:0!important;box-shadow:none!important;
+}
+html body .team-section img.team-avatar-svg{
+  display:block!important;visibility:visible!important;opacity:1!important;
+  width:88px!important;height:88px!important;max-width:88px!important;max-height:88px!important;
+  object-fit:contain!important;background:transparent!important;
+}
+@media(max-width:760px){
+ html body .team-section .team-avatar-link,html body .team-section .team-avatar-wrap,
+ html body .team-section img.team-avatar-svg{width:72px!important;height:72px!important;min-width:72px!important;min-height:72px!important;max-width:72px!important;max-height:72px!important}
+}
