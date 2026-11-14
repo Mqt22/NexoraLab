@@ -4635,3 +4635,34 @@ html body .team-section .team-avatar-wrap{margin:0 auto 8px!important}
  html body .team-section .team-card .team-handle,
  html body .team-section .team-card .team-role{font-size:10px!important}
 }
+
+
+/* Tight centered employee group — override previous wide card sizing */
+html body .team-section .team-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,max-content)!important;
+  justify-content:center!important;
+  justify-items:center!important;
+  align-items:start!important;
+  column-gap:10px!important;
+  row-gap:8px!important;
+  width:max-content!important;
+  max-width:100%!important;
+  margin:0 auto!important;
+}
+html body .team-section .team-grid .team-card,
+html body .team-section .team-grid .team-card:nth-child(n){
+  display:flex!important;
+  width:auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  flex:none!important;
+  margin:0!important;
+  padding:4px 2px!important;
+  justify-self:center!important;
+}
+@media(max-width:520px){
+ html body .team-section .team-grid{column-gap:8px!important;width:100%!important}
+ html body .team-section .team-grid .team-card,
+ html body .team-section .team-grid .team-card:nth-child(n){width:auto!important;max-width:100%!important}
+}
