@@ -5839,3 +5839,126 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   font-size: 13px !important;
   line-height: 1.5 !important;
 }
+
+
+/* LAST OVERRIDE — normalize all four team cards and Abdul's portrait dimensions. */
+html body .team-section .team-container .team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  justify-items: stretch !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+html body .team-section .team-container .team-grid > article.team-card {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  align-self: stretch !important;
+  justify-self: stretch !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 190px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 8px 10px 12px !important;
+  gap: 0 !important;
+  text-align: center !important;
+  transform: none !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman {
+  align-self: stretch !important;
+  justify-self: stretch !important;
+  margin: 0 !important;
+  padding: 8px 10px 12px !important;
+  min-height: 190px !important;
+  height: 100% !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman > .team-avatar-wrap {
+  position: relative !important;
+  display: flex !important;
+  flex: 0 0 170px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  width: 170px !important;
+  height: 170px !important;
+  min-width: 170px !important;
+  min-height: 170px !important;
+  max-width: 170px !important;
+  max-height: 170px !important;
+  margin: 0 auto 12px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman > .team-avatar-wrap::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 10px !important;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  background: #d5f5ee !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman > .team-avatar-wrap > img.team-avatar-svg {
+  position: relative !important;
+  display: block !important;
+  flex: 0 0 150px !important;
+  box-sizing: border-box !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 35% !important;
+  box-shadow: none !important;
+  z-index: 1 !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman > h3 {
+  width: 100% !important;
+  margin: 0 0 3px !important;
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman > .team-handle {
+  margin: 0 0 3px !important;
+  line-height: 1.4 !important;
+}
+html body .team-section .team-container .team-grid > article.team-card-abdul-rehman > .team-role {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  html body .team-section .team-container .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 760px) {
+  html body .team-section .team-container .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    gap: 14px !important;
+  }
+  html body .team-section .team-container .team-grid > article.team-card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
