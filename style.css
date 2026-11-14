@@ -4885,67 +4885,72 @@ html body .team-section .team-container .team-grid .team-card .team-role{
 
 
 
-/* Team portraits: equal 250px circles with soft badge-matched backdrops */
+
+/* Team member avatars: identical 150x150 images with badge-tinted circular backgrounds */
 html body .team-section .team-container .team-grid .team-card .team-avatar-link,
 html body .team-section .team-container .team-grid .team-card .team-avatar-wrap{
   display:flex!important;
   align-items:center!important;
   justify-content:center!important;
   box-sizing:border-box!important;
-  flex:0 0 250px!important;
-  width:250px!important;height:250px!important;
-  min-width:250px!important;min-height:250px!important;
-  max-width:250px!important;max-height:250px!important;
+  flex:0 0 150px!important;
+  width:150px!important;
+  height:150px!important;
+  min-width:150px!important;
+  min-height:150px!important;
+  max-width:150px!important;
+  max-height:150px!important;
   margin:0 auto 10px!important;
+  padding:0!important;
+  border:0!important;
   border-radius:50%!important;
   overflow:hidden!important;
-  border:5px solid #fff!important;
-  box-shadow:0 0 0 2px rgba(15,23,42,.07)!important;
 }
 html body .team-section .team-container .team-grid .team-card-haider .team-avatar-link,
 html body .team-section .team-container .team-grid .team-card-haider .team-avatar-wrap{
   background:#fff0df!important;
-  box-shadow:0 0 0 2px #f2c99f!important;
 }
 html body .team-section .team-container .team-grid .team-card-taha .team-avatar-link,
 html body .team-section .team-container .team-grid .team-card-taha .team-avatar-wrap{
   background:#eaf2ff!important;
-  box-shadow:0 0 0 2px #bfd4fa!important;
 }
 html body .team-section .team-container .team-grid .team-card-tahreem .team-avatar-link,
 html body .team-section .team-container .team-grid .team-card-tahreem .team-avatar-wrap{
   background:#fcecf4!important;
-  box-shadow:0 0 0 2px #f3c4dc!important;
 }
-html body .team-section .team-container .team-grid .team-card img.team-avatar-svg{
+html body .team-section .team-container .team-grid .team-card img.team-avatar-svg,
+html body .team-section .team-container .team-grid .team-card-tahreem img.team-avatar-svg{
   display:block!important;
   box-sizing:border-box!important;
-  width:250px!important;height:250px!important;
-  min-width:250px!important;min-height:250px!important;
-  max-width:250px!important;max-height:250px!important;
+  flex:0 0 150px!important;
+  width:150px!important;
+  height:150px!important;
+  min-width:150px!important;
+  min-height:150px!important;
+  max-width:150px!important;
+  max-height:150px!important;
   object-fit:cover!important;
   border-radius:50%!important;
   margin:0!important;
+  padding:0!important;
 }
-html body .team-section .team-container .team-grid .team-card-tahreem img.team-avatar-svg{
-  width:226px!important;height:226px!important;
-  min-width:226px!important;min-height:226px!important;
-  max-width:226px!important;max-height:226px!important;
-  object-fit:contain!important;
-  border-radius:50%!important;
+/* Keep the tinted circle strictly confined to the avatar wrapper, never the text */
+html body .team-section .team-container .team-grid .team-card h3,
+html body .team-section .team-container .team-grid .team-card .team-handle,
+html body .team-section .team-container .team-grid .team-card .team-role{
+  background:transparent!important;
+  box-shadow:none!important;
 }
 @media(max-width:900px){
   html body .team-section .team-container .team-grid .team-card .team-avatar-link,
   html body .team-section .team-container .team-grid .team-card .team-avatar-wrap{
-    width:min(250px,100%)!important;height:auto!important;aspect-ratio:1/1!important;
-    min-width:0!important;min-height:0!important;max-width:250px!important;max-height:250px!important;
+    flex-basis:150px!important;width:150px!important;height:150px!important;
+    min-width:150px!important;min-height:150px!important;
+    max-width:150px!important;max-height:150px!important;
   }
   html body .team-section .team-container .team-grid .team-card img.team-avatar-svg{
-    width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;
-    max-width:100%!important;max-height:100%!important;aspect-ratio:1/1!important;
-  }
-  html body .team-section .team-container .team-grid .team-card-tahreem img.team-avatar-svg{
-    width:90%!important;height:90%!important;min-width:0!important;min-height:0!important;
-    max-width:90%!important;max-height:90%!important;
+    flex-basis:150px!important;width:150px!important;height:150px!important;
+    min-width:150px!important;min-height:150px!important;
+    max-width:150px!important;max-height:150px!important;
   }
 }
