@@ -5413,10 +5413,10 @@ html body .team-section .team-container .team-grid > article.team-card-abdul-reh
   align-items: center !important;
   justify-content: center !important;
   flex: 0 0 170px !important;
-  width: 170px !important;
-  height: 170px !important;
-  min-width: 170px !important;
-  min-height: 170px !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  min-height: 150px !important;
   max-width: 170px !important;
   max-height: 170px !important;
   margin: 0 auto 10px !important;
