@@ -5091,3 +5091,52 @@ html body .team-section .team-container .team-grid .team-card-tahreem .team-hand
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Solid filled avatar discs: let the member photo sit inside the color, not cover it */
+html body .team-section .team-container .team-grid .team-card .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap {
+  width: 170px !important;
+  height: 170px !important;
+  min-width: 170px !important;
+  min-height: 170px !important;
+  flex: 0 0 170px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+html body .team-section .team-container .team-grid .team-card-haider .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card-haider .team-avatar-wrap {
+  background-color: #fff0df !important;
+}
+html body .team-section .team-container .team-grid .team-card-taha .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card-taha .team-avatar-wrap {
+  background-color: #eaf2ff !important;
+}
+html body .team-section .team-container .team-grid .team-card-tahreem .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card-tahreem .team-avatar-wrap {
+  background-color: #fcecf4 !important;
+}
+html body .team-section .team-container .team-grid .team-card .team-avatar-link img,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap img,
+html body .team-section .team-container .team-grid .team-card img.team-avatar-svg {
+  width: 126px !important;
+  height: 126px !important;
+  min-width: 126px !important;
+  min-height: 126px !important;
+  max-width: 126px !important;
+  max-height: 126px !important;
+  flex: 0 0 126px !important;
+  object-fit: cover !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+}
