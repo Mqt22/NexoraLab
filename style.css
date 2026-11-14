@@ -4477,3 +4477,9 @@ a.team-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 42px rg
 .team-avatar-link{display:block!important;flex:0 0 auto!important;margin:0 auto 20px!important}
 .team-avatar-wrap{display:block!important;flex:0 0 auto!important;margin:0 auto 20px!important}
 .team-avatar-link:hover,.team-card:hover .team-avatar-wrap{transform:scale(1.06)!important}
+
+
+/* External cartoon SVG avatar illustrations */
+.team-avatar-svg{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;background:transparent!important}
+.team-avatar-link,.team-avatar-wrap{overflow:hidden!important;border-radius:50%!important}
+.team-avatar-link img,.team-avatar-wrap img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important}
