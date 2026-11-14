@@ -4666,3 +4666,50 @@ html body .team-section .team-grid .team-card:nth-child(n){
  html body .team-section .team-grid .team-card,
  html body .team-section .team-grid .team-card:nth-child(n){width:auto!important;max-width:100%!important}
 }
+
+
+/* Definitive final team sizing and centering override */
+html body .team-section .team-container .team-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3, minmax(0, 92px))!important;
+  justify-content:center!important;
+  justify-items:center!important;
+  align-items:start!important;
+  gap:4px!important;
+  width:fit-content!important;
+  max-width:100%!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+html body .team-section .team-container .team-grid .team-card{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:92px!important;
+  max-width:92px!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:4px 0!important;
+  background:transparent!important;
+  background-image:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body .team-section .team-container .team-grid .team-card .team-avatar-link,
+html body .team-section .team-container .team-grid .team-card .team-avatar-wrap,
+html body .team-section .team-container .team-grid .team-card img.team-avatar-svg{
+  display:block!important;
+  width:32px!important;
+  height:32px!important;
+  min-width:32px!important;
+  min-height:32px!important;
+  max-width:32px!important;
+  max-height:32px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+@media(max-width:380px){
+ html body .team-section .team-container .team-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;gap:2px!important}
+ html body .team-section .team-container .team-grid .team-card{width:100%!important;max-width:100%!important}
+}
