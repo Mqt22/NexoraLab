@@ -4501,3 +4501,32 @@ a.team-card:hover{transform:translateY(-7px)!important;box-shadow:0 20px 42px rg
 @media(max-width:760px){.team-section{padding:44px 18px!important}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:520px!important;gap:12px!important}.team-card{padding:18px 12px 16px!important}.team-avatar-link,.team-avatar-wrap{width:68px!important;height:68px!important}}
 @media(max-width:380px){.team-grid{grid-template-columns:1fr!important;max-width:300px!important}}
 @media(prefers-reduced-motion:reduce){.team-card{transition:none!important}}
+
+
+/* Clean team presentation: avatar, name, handle, secondary role only */
+.team-section{background:transparent!important}
+.team-grid{gap:30px!important}
+.team-card,.team-card-haider,.team-card-taha,.team-card-tahreem{
+  min-height:0!important;height:auto!important;padding:8px 10px 12px!important;
+  border:0!important;border-radius:0!important;background:transparent!important;
+  box-shadow:none!important;outline:0!important;
+}
+.team-card:hover,.team-card-haider:hover,.team-card-taha:hover,.team-card-tahreem:hover{
+  border:0!important;background:transparent!important;box-shadow:none!important;
+  transform:translateY(-6px)!important;
+}
+.team-avatar-link,.team-avatar-wrap{
+  width:88px!important;height:88px!important;margin:0 auto 12px!important;
+  border:0!important;border-radius:50%!important;box-shadow:none!important;
+  overflow:hidden!important;background:transparent!important;
+}
+.team-avatar-svg{width:100%!important;height:100%!important;object-fit:contain!important;background:transparent!important}
+.team-card h3{font-size:18px!important;font-weight:800!important;line-height:1.25!important;margin:0 0 4px!important}
+.team-card-haider h3{color:#c2410c!important}
+.team-card-taha h3{color:#1d4ed8!important}
+.team-card-tahreem h3{color:#be185d!important}
+.team-card .team-handle{font-size:12px!important;line-height:1.4!important;font-weight:600!important;color:#8b93a1!important;margin:0 0 3px!important}
+.team-card .team-role{font-size:12px!important;line-height:1.4!important;font-weight:400!important;color:#98a1af!important;margin:0!important}
+@media(max-width:760px){.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}.team-card{padding:6px 3px 10px!important}.team-avatar-link,.team-avatar-wrap{width:68px!important;height:68px!important}.team-card h3{font-size:15px!important}.team-card .team-handle,.team-card .team-role{font-size:11px!important}}
+@media(max-width:380px){.team-grid{grid-template-columns:1fr!important;max-width:240px!important}}
+@media(prefers-reduced-motion:reduce){.team-card{transition:none!important}}
